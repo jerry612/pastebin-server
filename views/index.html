@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PasteBin Server</title>
+    <meta name="description" content="PasteBin Server" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        Post Test
+      </h1>
+    </header>
+
+    <main>
+      <form action="/new" method="POST">
+        <textarea name="cipher_text" type="text"></textarea>
+        <select id="expiration" name="expiration" style="display: flex;">
+          <option value="burn_after_reading">Burn after reading</option>
+          <option selected value="1_day">1 day</option>
+          <option value="1_month">1 month</option>
+          <option value="never">Never</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+      <section class="users">
+        <ul id="users"></ul>
+      </section>
+      <p><a href="/reset">Reset</a></p>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
